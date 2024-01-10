@@ -719,28 +719,31 @@
               If you got any questions <br />please do not hesitate to send us a
               message
             </h2>
-            <form action="#" class="bg-light p-5 contact-form">
+            <form id="contactForm" action="process_form.php" method="post">
               <div class="form-group">
                 <input
                   type="text"
+                  id="name"
                   class="form-control"
                   placeholder="Your Name"
+                  required
                 />
               </div>
               <div class="form-group">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
                   placeholder="Your Email"
+                  id="emial"
+                  required
                 />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input type="text" id="subject" class="form-control" placeholder="Subject" required/>
               </div>
               <div class="form-group">
                 <textarea
-                  name
-                  id
+                  id = "message"
                   cols="30"
                   rows="7"
                   class="form-control"
