@@ -152,6 +152,13 @@ caption {
   text-align: left;
   caption-side: bottom; }
 
+
+#msg{
+  color: #61b752;
+  margin-top: 20px;
+  display: block;
+  font-size: 20px;
+}
 th {
   text-align: inherit; }
 
@@ -1747,7 +1754,7 @@ h1, h2, h3, h4,
     content: '';
     opacity: .5;
     background: #21243d;
-    height: 850px; }
+    height: 0px; }
   .hero-wrap.hero-wrap-2 {
     height: 500px !important;
     position: relative; }

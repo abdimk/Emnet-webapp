@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Emebet</title>
+    <title>EMNET</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -98,7 +98,8 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">EMEBET</a>
+        <!-- <a class="navbar-brand" href="index.html">EMEBET</a> -->
+        <img src="images/250.png" alt="emebet-logo" width="200px" height="100px"/>
         <button
           class="navbar-toggler"
           type="button"
@@ -136,7 +137,16 @@
         </div>
       </div>
     </nav>
+    <script>
+      const toggleBtn = document.querySelector('.navbar');
+      const nav_collapse = document.querySelector('.navbar-toggler');
+      const toggleButtonItems = document.querySelector('.nav-link');
 
+      toggleButtonItems.onclick = function(){
+        nav_collapse.classList.toggle('navbar-collapse');
+      }
+
+    </script>
     <section
       id="home-main"
       class="hero-wrap"
@@ -154,8 +164,9 @@
               </p>
               <p>
                 <a href="#contact-main" class="btn btn-primary py-3 px-4"
-                  >Contact us</a
-                >
+                  >Regester Your Property</a>
+
+                
               </p>
             </div>
           </div>
@@ -468,7 +479,8 @@
           </div>
           <div class="col-md-5 wrap-about py-md-5 ftco-animate">
             <div class="heading-section pr-md-5">
-              <h2 class="mb-4">EMEBET PROPERTY MANAGEMENT</h2>
+              <img src="images/100.png">
+              <h2 class="mb-4">EMNET PROPERTY MANAGEMENT</h2>
               <p>
                 Our dedicated team at emebet property management is driven by a
                 passion for delivering unparalleled service to property owners
@@ -485,7 +497,7 @@
                 property performance and ensuring peace of mind. Discover the
                 difference of working with a property management team that
                 values honesty, communication, and a personalized touch.
-                <br />Emebet Property Management – Your Property, Our Priority."
+                <br />EMNET Property Management – Your Property, Our Priority."
               </p>
             </div>
           </div>
@@ -710,7 +722,7 @@
     </section>
 
     <!-- CONTACT SECTOION-->
-    <script src="js/app.js"></script>
+  
     <section id="contact-main" class="ftco-section contact-section">
       <div class="container">
         <div class="row block-9 justify-content-center mb-5">
@@ -720,11 +732,13 @@
               message
             </h2>
             <!-- <form id="contactForm" action="http://localhost:5500/submit-form" method="post"> -->
-              <form  action="#"></form>
+            <form  name="submit-to-google-sheet" >
+              <span id="msg"></span>
               <div class="form-group">
                 <input
                   type="text"
-                  id="name"
+                  id="Name"
+                  name="Name"
                   class="form-control"
                   placeholder="Your Name"
                   required
@@ -732,7 +746,8 @@
               </div>
               <div class="form-group">
                 <input
-                  type="email"
+                  type="Email"
+                  name="Email"
                   class="form-control"
                   placeholder="Your Email"
                   id="emial"
@@ -740,24 +755,50 @@
                 />
               </div>
               <div class="form-group">
-                <input type="text" id="subject" class="form-control" placeholder="Subject" required/>
+                <input type="text" id="Subject" name="Subject" class="form-control" placeholder="Subject" required/>
               </div>
+
+              <section id="datetime-section">
+                <p>The current date and time is: <time name="Time" id="currentDateTime"></time></p>
+                
+              </section>
+              
               <div class="form-group">
                 <textarea
-                  id = "message"
+                  id = "Message"
+                  name="Message"
                   cols="30"
                   rows="7"
                   class="form-control"
                   placeholder="Message"
                 ></textarea>
               </div>
+              
+
+
+
+              <script>
+
+              function updateDateTime() {
+                  var currentDateTimeElement = document.getElementById('currentDateTime');
+                  var now = new Date();
+                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+                  currentDateTimeElement.textContent = now.toLocaleDateString('en-US', options);
+              }
+
+              // Update the date and time every second
+              setInterval(updateDateTime, 1000);
+
+              // Initial update
+              updateDateTime();
+
+              </script>
+              
               <div class="form-group">
-                <input
-                  type="#"
-                  value="Send Message"
-                  class="btn btn-primary py-3 px-5"
-                />
+                <button type="submit" class="btn btn-primary py-3 px-5">Submit Message</button>
+                
               </div>
+              
             </form>
           </div>
         </div>
@@ -804,6 +845,35 @@
       </div>
     </section>
 
+
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwz6X0qEhVrqIKAVqtitY-GRKxWPybNHc46E4TjRurmF1jAjJiZBXJqJM5QePUL6pBi/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById('msg')
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {msg.innerHTML="Message sent successfuly! we will respond as soon as possible" 
+          setTimeout(function(){
+            msg.innerHTML = ""
+          }, 5000)
+
+          form.reset()
+        
+        })
+          .catch(error => console.error('Error!', error.message))
+      })
+
+
+    </script>
+
+    
+    
+    
+    
+    
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
