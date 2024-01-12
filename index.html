@@ -760,7 +760,7 @@
 
               <section id="datetime-section">
                 <p>The current date and time is: <time name="Time" id="currentDateTime"></time></p>
-                
+                <input name="Time" type="text" id="datetime" readonly />
               </section>
               
               <div class="form-group">
@@ -780,17 +780,22 @@
               <script>
 
               function updateDateTime() {
-                  var currentDateTimeElement = document.getElementById('currentDateTime');
+                  var datetimeInput = document.getElementById('datetime');
+
                   var now = new Date();
-                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-                  currentDateTimeElement.textContent = now.toLocaleDateString('en-US', options);
+                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                  var formattedDateTime = now.toLocaleDateString('en-US', options);
+
+                  datetimeInput.value = formattedDateTime;
               }
 
-              // Update the date and time every second
+              // Update the date every second
               setInterval(updateDateTime, 1000);
 
               // Initial update
               updateDateTime();
+
+
 
               </script>
               
