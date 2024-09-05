@@ -1,639 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>EMNET</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="images/fav.png" type="image/png" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    \
+<head>
+  <title>EMNET</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="images/fav.png" type="image/png" />
 
-    <script nonce="572a475b-c796-49d3-822e-139fded7bdf0">
-      (function (w, d) {
-        !(function (dp, dq, dr, ds) {
-          dp[dr] = dp[dr] || {};
-          dp[dr].executed = [];
-          dp.zaraz = { deferred: [], listeners: [] };
-          dp.zaraz.q = [];
-          dp.zaraz._f = function (dt) {
-            return async function () {
-              var du = Array.prototype.slice.call(arguments);
-              dp.zaraz.q.push({ m: dt, a: du });
-            };
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  \
+
+  <script nonce="572a475b-c796-49d3-822e-139fded7bdf0">
+    (function (w, d) {
+      !(function (dp, dq, dr, ds) {
+        dp[dr] = dp[dr] || {};
+        dp[dr].executed = [];
+        dp.zaraz = { deferred: [], listeners: [] };
+        dp.zaraz.q = [];
+        dp.zaraz._f = function (dt) {
+          return async function () {
+            var du = Array.prototype.slice.call(arguments);
+            dp.zaraz.q.push({ m: dt, a: du });
           };
-          for (const dv of ["track", "set", "debug"])
-            dp.zaraz[dv] = dp.zaraz._f(dv);
-          dp.zaraz.init = () => {
-            var dw = dq.getElementsByTagName(ds)[0],
-              dx = dq.createElement(ds),
-              dy = dq.getElementsByTagName("title")[0];
-            dy && (dp[dr].t = dq.getElementsByTagName("title")[0].text);
-            dp[dr].x = Math.random();
-            dp[dr].w = dp.screen.width;
-            dp[dr].h = dp.screen.height;
-            dp[dr].j = dp.innerHeight;
-            dp[dr].e = dp.innerWidth;
-            dp[dr].l = dp.location.href;
-            dp[dr].r = dq.referrer;
-            dp[dr].k = dp.screen.colorDepth;
-            dp[dr].n = dq.characterSet;
-            dp[dr].o = new Date().getTimezoneOffset();
-            if (dp.dataLayer)
-              for (const dC of Object.entries(
-                Object.entries(dataLayer).reduce(
-                  (dD, dE) => ({ ...dD[1], ...dE[1] }),
-                  {}
-                )
-              ))
-                zaraz.set(dC[0], dC[1], { scope: "page" });
-            dp[dr].q = [];
-            for (; dp.zaraz.q.length; ) {
-              const dF = dp.zaraz.q.shift();
-              dp[dr].q.push(dF);
-            }
-            dx.defer = !0;
-            for (const dG of [localStorage, sessionStorage])
-              Object.keys(dG || {})
-                .filter((dI) => dI.startsWith("_zaraz_"))
-                .forEach((dH) => {
-                  try {
-                    dp[dr]["z_" + dH.slice(7)] = JSON.parse(dG.getItem(dH));
-                  } catch {
-                    dp[dr]["z_" + dH.slice(7)] = dG.getItem(dH);
-                  }
-                });
-            dx.referrerPolicy = "origin";
-            dx.src =
-              "../../cdn-cgi/zaraz/sd0d9.js?z=" +
-              btoa(encodeURIComponent(JSON.stringify(dp[dr])));
-            dw.parentNode.insertBefore(dx, dw);
-          };
-          ["complete", "interactive"].includes(dq.readyState)
-            ? zaraz.init()
-            : dp.addEventListener("DOMContentLoaded", zaraz.init);
-        })(w, d, "zarazData", "script");
-      })(window, document);
-    </script>
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-      id="ftco-navbar"
-    >
-      <div class="container">
-        <!-- <a class="navbar-brand" href="index.html">EMEBET</a> -->
-        <img src="images/250.png" alt="emebet-logo" width="200px" height="100px"/>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="#home-main" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#services-main1" class="nav-link">Services</a>
-            </li>
+        };
+        for (const dv of ["track", "set", "debug"])
+          dp.zaraz[dv] = dp.zaraz._f(dv);
+        dp.zaraz.init = () => {
+          var dw = dq.getElementsByTagName(ds)[0],
+            dx = dq.createElement(ds),
+            dy = dq.getElementsByTagName("title")[0];
+          dy && (dp[dr].t = dq.getElementsByTagName("title")[0].text);
+          dp[dr].x = Math.random();
+          dp[dr].w = dp.screen.width;
+          dp[dr].h = dp.screen.height;
+          dp[dr].j = dp.innerHeight;
+          dp[dr].e = dp.innerWidth;
+          dp[dr].l = dp.location.href;
+          dp[dr].r = dq.referrer;
+          dp[dr].k = dp.screen.colorDepth;
+          dp[dr].n = dq.characterSet;
+          dp[dr].o = new Date().getTimezoneOffset();
+          if (dp.dataLayer)
+            for (const dC of Object.entries(
+              Object.entries(dataLayer).reduce(
+                (dD, dE) => ({ ...dD[1], ...dE[1] }),
+                {}
+              )
+            ))
+              zaraz.set(dC[0], dC[1], { scope: "page" });
+          dp[dr].q = [];
+          for (; dp.zaraz.q.length;) {
+            const dF = dp.zaraz.q.shift();
+            dp[dr].q.push(dF);
+          }
+          dx.defer = !0;
+          for (const dG of [localStorage, sessionStorage])
+            Object.keys(dG || {})
+              .filter((dI) => dI.startsWith("_zaraz_"))
+              .forEach((dH) => {
+                try {
+                  dp[dr]["z_" + dH.slice(7)] = JSON.parse(dG.getItem(dH));
+                } catch {
+                  dp[dr]["z_" + dH.slice(7)] = dG.getItem(dH);
+                }
+              });
+          dx.referrerPolicy = "origin";
+          dx.src =
+            "../../cdn-cgi/zaraz/sd0d9.js?z=" +
+            btoa(encodeURIComponent(JSON.stringify(dp[dr])));
+          dw.parentNode.insertBefore(dx, dw);
+        };
+        ["complete", "interactive"].includes(dq.readyState)
+          ? zaraz.init()
+          : dp.addEventListener("DOMContentLoaded", zaraz.init);
+      })(w, d, "zarazData", "script");
+    })(window, document);
+  </script>
+</head>
 
-            <li class="nav-item">
-              <a href="#properties-main" class="nav-link">Properties</a>
-            </li>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="index.html">EMEBET</a> -->
+      <img src="images/250.png" alt="emebet-logo" width="200px" height="100px" />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="#home-main" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services-main1" class="nav-link">Services</a>
+          </li>
 
-            <li class="nav-item">
-              <a href="#more-us" class="nav-link">Why Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Testimonial-main" class="nav-link">Testimonial</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact-main" class="nav-link">Contact</a>
-            </li>
-          </ul>
+          <li class="nav-item">
+            <a href="#properties-main" class="nav-link">Properties</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#more-us" class="nav-link">Why Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Testimonial-main" class="nav-link">Testimonial</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact-main" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    const toggleBtn = document.querySelector('.navbar');
+    const nav_collapse = document.querySelector('.navbar-toggler');
+    const toggleButtonItems = document.querySelector('.nav-link');
+
+    toggleButtonItems.onclick = function () {
+      nav_collapse.classList.toggle('navbar-collapse');
+    }
+
+  </script>
+  <section id="home-main" class="hero-wrap" style="background-image: url('images/bg_1.jpg')"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center">
+        <div class="col-lg-7 col-md-6 ftco-animate d-flex align-items-end">
+          <div class="text">
+            <h1 class="mb-4">Property Management<br />Across Grand Rapids</h1>
+            <p style="font-size: 18px">
+              Hand your rental home over to the residential pros
+            </p>
+            <p>
+              <a href="myforms.html"" class=" btn btn-primary py-3 px-4">Regester Your Property</a>
+
+
+            </p>
+          </div>
         </div>
       </div>
-    </nav>
-    <script>
-      const toggleBtn = document.querySelector('.navbar');
-      const nav_collapse = document.querySelector('.navbar-toggler');
-      const toggleButtonItems = document.querySelector('.nav-link');
+    </div>
+  </section>
 
-      toggleButtonItems.onclick = function(){
-        nav_collapse.classList.toggle('navbar-collapse');
-      }
-
-    </script>
-    <section
-      id="home-main"
-      class="hero-wrap"
-      style="background-image: url('images/bg_1.jpg')"
-      data-stellar-background-ratio="0.5"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center">
-          <div class="col-lg-7 col-md-6 ftco-animate d-flex align-items-end">
-            <div class="text">
-              <h1 class="mb-4">Property Management<br />Across Grand Rapids</h1>
-              <p style="font-size: 18px">
-                Hand your rental home over to the residential pros
-              </p>
+  <section id="services-main1" class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center heading-section ftco-animate mb-5">
+          <span class="subheading">WHAT WE OFFER</span>
+          <h2 class="mb-3">Discover Our Services</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-home"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Property Marketing</h3>
               <p>
-                <a href="myforms.html"" class="btn btn-primary py-3 px-4"
-                  >Regester Your Property</a>
-
-                
+                When you have a vacancy on your hands, rest easy with the
+                experts on your side. We market your property using proven
+                marketing techniques to find the right renter, fast.
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id = "services-main1" class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center heading-section ftco-animate mb-5">
-            <span class="subheading">WHAT WE OFFER</span>
-            <h2 class="mb-3">Discover Our Services</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-home"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Property Marketing</h3>
-                <p>
-                  When you have a vacancy on your hands, rest easy with the
-                  experts on your side. We market your property using proven
-                  marketing techniques to find the right renter, fast.
-                </p>
-              </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-stats"></span>
             </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-stats"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Tenant Screening</h3>
-                <p>
-                  All applicants for our rental homes must meet our strict
-                  screening requirements. We qualify tenants using background,
-                  financial, and reference checks.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-quarantine"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Rent Collection</h3>
-                <p>
-                  It's easy to access your monthly earnings with our streamlined
-                  accounting process. We collect all funds for you and deposit
-                  them directly to your bank account.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-business"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Maintenance</h3>
-                <p>
-                  When maintenance trouble arises, our team is ready to jump
-                  into action. We coordinate repairs with tenants, dispatch
-                  service providers, and make sure the job is done correctly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="properties-main" class="ftco-section ftco-no-pt">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-            <span class="subheading">Properties</span>
-            <h2 class="mb-2">Properties for this Cities</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <a
-              href="#"
-              class="search-place img"
-              style="background-image: url(images/place-1.jpg)"
-            >
-              <div class="desc">
-                <h3><span>Hawassa</span></h3>
-                <span>15 Properties</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a
-              href="#"
-              class="search-place img"
-              style="background-image: url(images/place-2.jpg)"
-            >
-              <div class="desc">
-                <h3><span>Addis Abeba</span></h3>
-                <span>10 Properties</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a
-              href="#"
-              class="search-place img"
-              style="background-image: url(images/place-3.jpg)"
-            >
-              <div class="desc">
-                <h3><span>Arba Minch</span></h3>
-                <span>15 Properties</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="more-us" class="ftco-section services-section bg-darken">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div
-            class="col-md-12 text-center heading-section heading-section-white ftco-animate"
-          >
-            <span class="subheading">What does property management cost?</span>
-            <h2 class="mb-3">Why Choose Simple Property Management?</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>01</span>
-                  <img src="images/blob.svg" alt />
-                </div>
-                <h3>We Keep You Constantly Informed</h3>
-                <p>
-                  We understand you want to stay abreast of the latest
-                  circumstances impacting the health of your real estate
-                  investment.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>02</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Our Team Stays Connected with Technology</h3>
-                <p>
-                  At Simple Property Management, we've embraced tools like
-                  online account portals and digital property listings. These
-                  tools keep us efficient & help us better connect with you.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>03</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Customer Service is Our Priorityl</h3>
-                <p>
-                  Our management staff aims to provide the very best customer
-                  service in the industry. We treat our clients and tenants with
-                  respect, and we go the extra mile to ensure satisfaction.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>04</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Honesty Defines Our Management Approach</h3>
-                <p>
-                  Many property owners find themselves discouraged after working
-                  with property managers who put the mighty dollar above all
-                  else.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>05</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Tailored Marketing Strategies</h3>
-                <p>
-                  Simple Property Management understands the unique features of
-                  your property. We develop personalized marketing strategies to
-                  attract the right tenants and maximize your property's
-                  exposure in the market.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>06</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Proactive Maintenance Solutions</h3>
-                <p>
-                  We believe in proactive property maintenance to prevent issues
-                  before they arise. Our team conducts regular inspections,
-                  addressing potential concerns promptly and ensuring your
-                  property remains in excellent condition.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>07</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Transparent Financial Reporting</h3>
-                <p>
-                  Trust and transparency are paramount. With Simple Property
-                  Management, you'll receive clear and detailed financial
-                  reports regularly. Stay informed about income, expenses, and
-                  overall financial performance effortlessly.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services services-2">
-              <div class="media-body py-md-4 text-center">
-                <div
-                  class="icon mb-1 d-flex align-items-center justify-content-center"
-                >
-                  <span>08</span> <img src="images/blob.svg" alt />
-                </div>
-                <h3>Local Expertise, Global Standards</h3>
-                <p>
-                  Benefit from our deep local knowledge combined with global
-                  property management standards. Whether you're a local investor
-                  or an international property owner, our expertise ensures your
-                  investment is in capable hands.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about-section" class="ftco-section ftco-no-pb ftco-no-pt">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7 order-md-last d-flex align-items-stretch">
-            <div
-              class="img w-100 img-2 mr-md-2"
-              style="background-image: url(images/about.jpg)"
-            ></div>
-            <div
-              class="img w-100 img-2 ml-md-2"
-              style="background-image: url(images/about-2.jpg)"
-            ></div>
-          </div>
-          <div class="col-md-5 wrap-about py-md-5 ftco-animate">
-            <div class="heading-section pr-md-5">
-              <img src="images/100.png">
-              <h2 class="mb-4">EMNET PROPERTY MANAGEMENT</h2>
+            <div class="media-body py-md-4">
+              <h3>Tenant Screening</h3>
               <p>
-                Our dedicated team at emebet property management is driven by a
-                passion for delivering unparalleled service to property owners
-                and tenants alike. With a keen understanding of the local real
-                estate landscape, we offer tailored solutions that go beyond
-                industry standards.
+                All applicants for our rental homes must meet our strict
+                screening requirements. We qualify tenants using background,
+                financial, and reference checks.
               </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-quarantine"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Rent Collection</h3>
               <p>
-                Emphasizing transparency, we keep our clients well-informed
-                about every aspect of their property investment journey. From
-                leveraging cutting-edge technology for streamlined operations to
-                prioritizing customer service as a cornerstone of our approach,
-                emebet property management is your trusted partner in optimizing
-                property performance and ensuring peace of mind. Discover the
-                difference of working with a property management team that
-                values honesty, communication, and a personalized touch.
-                <br />EMNET Property Management – Your Property, Our Priority."
+                It's easy to access your monthly earnings with our streamlined
+                accounting process. We collect all funds for you and deposit
+                them directly to your bank account.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-business"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Maintenance</h3>
+              <p>
+                When maintenance trouble arises, our team is ready to jump
+                into action. We coordinate repairs with tenants, dispatch
+                service providers, and make sure the job is done correctly.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="ftco-counter img" id="section-counter">
-      <div class="container">
-        <div class="row pt-md-5">
-          <div
-            class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 py-5 mb-4">
-              <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Area <br />Population</span>
+    </div>
+  </section>
+
+  <section id="properties-main" class="ftco-section ftco-no-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+          <span class="subheading">Properties</span>
+          <h2 class="mb-2">Properties for this Cities</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#" class="search-place img" style="background-image: url(images/place-1.jpg)">
+            <div class="desc">
+              <h3><span>Hawassa</span></h3>
+              <span>15 Properties</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="search-place img" style="background-image: url(images/place-2.jpg)">
+            <div class="desc">
+              <h3><span>Addis Abeba</span></h3>
+              <span>10 Properties</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="search-place img" style="background-image: url(images/place-3.jpg)">
+            <div class="desc">
+              <h3><span>Arba Minch</span></h3>
+              <span>15 Properties</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more-us" class="ftco-section services-section bg-darken">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center heading-section heading-section-white ftco-animate">
+          <span class="subheading">What does property management cost?</span>
+          <h2 class="mb-3">Why Choose Simple Property Management?</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>01</span>
+                <img src="images/blob.svg" alt />
               </div>
+              <h3>We Keep You Constantly Informed</h3>
+              <p>
+                We understand you want to stay abreast of the latest
+                circumstances impacting the health of your real estate
+                investment.
+              </p>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 py-5 mb-4">
-              <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="2500">0</strong>
-                <span>Total <br />Properties</span>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>02</span> <img src="images/blob.svg" alt />
               </div>
+              <h3>Our Team Stays Connected with Technology</h3>
+              <p>
+                At Simple Property Management, we've embraced tools like
+                online account portals and digital property listings. These
+                tools keep us efficient & help us better connect with you.
+              </p>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 py-5 mb-4">
-              <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="500">0</strong>
-                <span>Average <br />House</span>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>03</span> <img src="images/blob.svg" alt />
               </div>
+              <h3>Customer Service is Our Priorityl</h3>
+              <p>
+                Our management staff aims to provide the very best customer
+                service in the industry. We treat our clients and tenants with
+                respect, and we go the extra mile to ensure satisfaction.
+              </p>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 py-5 mb-4">
-              <div class="text d-flex align-items-center">
-                <strong class="number" data-number="3">0</strong>
-                <span>Total <br />Branches</span>
+        </div>
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>04</span> <img src="images/blob.svg" alt />
               </div>
+              <h3>Honesty Defines Our Management Approach</h3>
+              <p>
+                Many property owners find themselves discouraged after working
+                with property managers who put the mighty dollar above all
+                else.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>05</span> <img src="images/blob.svg" alt />
+              </div>
+              <h3>Tailored Marketing Strategies</h3>
+              <p>
+                Simple Property Management understands the unique features of
+                your property. We develop personalized marketing strategies to
+                attract the right tenants and maximize your property's
+                exposure in the market.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>06</span> <img src="images/blob.svg" alt />
+              </div>
+              <h3>Proactive Maintenance Solutions</h3>
+              <p>
+                We believe in proactive property maintenance to prevent issues
+                before they arise. Our team conducts regular inspections,
+                addressing potential concerns promptly and ensuring your
+                property remains in excellent condition.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>07</span> <img src="images/blob.svg" alt />
+              </div>
+              <h3>Transparent Financial Reporting</h3>
+              <p>
+                Trust and transparency are paramount. With Simple Property
+                Management, you'll receive clear and detailed financial
+                reports regularly. Stay informed about income, expenses, and
+                overall financial performance effortlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+          <div class="media block-6 services services-2">
+            <div class="media-body py-md-4 text-center">
+              <div class="icon mb-1 d-flex align-items-center justify-content-center">
+                <span>08</span> <img src="images/blob.svg" alt />
+              </div>
+              <h3>Local Expertise, Global Standards</h3>
+              <p>
+                Benefit from our deep local knowledge combined with global
+                property management standards. Whether you're a local investor
+                or an international property owner, our expertise ensures your
+                investment is in capable hands.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section
-      id="Testimonial-main"
-      class="ftco-section testimony-section bg-light"
-    >
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Testimonial</span>
-            <h2 class="mb-3">Happy Clients</h2>
+  <section id="about-section" class="ftco-section ftco-no-pb ftco-no-pt">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 order-md-last d-flex align-items-stretch">
+          <div class="img w-100 img-2 mr-md-2" style="background-image: url(images/about.jpg)"></div>
+          <div class="img w-100 img-2 ml-md-2" style="background-image: url(images/about-2.jpg)"></div>
+        </div>
+        <div class="col-md-5 wrap-about py-md-5 ftco-animate">
+          <div class="heading-section pr-md-5">
+            <img src="images/100.png">
+            <h2 class="mb-4">EMNET PROPERTY MANAGEMENT</h2>
+            <p>
+              Our dedicated team at emebet property management is driven by a
+              passion for delivering unparalleled service to property owners
+              and tenants alike. With a keen understanding of the local real
+              estate landscape, we offer tailored solutions that go beyond
+              industry standards.
+            </p>
+            <p>
+              Emphasizing transparency, we keep our clients well-informed
+              about every aspect of their property investment journey. From
+              leveraging cutting-edge technology for streamlined operations to
+              prioritizing customer service as a cornerstone of our approach,
+              emebet property management is your trusted partner in optimizing
+              property performance and ensuring peace of mind. Discover the
+              difference of working with a property management team that
+              values honesty, communication, and a personalized touch.
+              <br />EMNET Property Management – Your Property, Our Priority."
+            </p>
           </div>
         </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      Top-notch management! Their proactive approach, financial
-                      transparency, and commitment to property upkeep have not
-                      only safeguarded our investment but also increased its
-                      overall value.
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="background-image: url(images/person_1.jpg)"
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Selamawit Godefa</p>
-                        <span class="position"
-                          >Marketing Manager at Saba Fashion</span
-                        >
-                      </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-counter img" id="section-counter">
+    <div class="container">
+      <div class="row pt-md-5">
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-5 mb-4">
+            <div class="text text-border d-flex align-items-center">
+              <strong class="number" data-number="1000">0</strong>
+              <span>Area <br />Population</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-5 mb-4">
+            <div class="text text-border d-flex align-items-center">
+              <strong class="number" data-number="2500">0</strong>
+              <span>Total <br />Properties</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-5 mb-4">
+            <div class="text text-border d-flex align-items-center">
+              <strong class="number" data-number="500">0</strong>
+              <span>Average <br />House</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-5 mb-4">
+            <div class="text d-flex align-items-center">
+              <strong class="number" data-number="3">0</strong>
+              <span>Total <br />Branches</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Testimonial-main" class="ftco-section testimony-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <span class="subheading">Testimonial</span>
+          <h2 class="mb-3">Happy Clients</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel">
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <span class="fa fa-quote-left"></span>
+                  <p class="mb-4">
+                    Top-notch management! Their proactive approach, financial
+                    transparency, and commitment to property upkeep have not
+                    only safeguarded our investment but also increased its
+                    overall value.
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Selamawit Godefa</p>
+                      <span class="position">Marketing Manager at Saba Fashion</span>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      "Outstanding service! Mesert property management team in
-                      Ethiopia has consistently exceeded our expectations. From
-                      timely rent collection to swift maintenance responses,
-                      they've made owning property a hassle-free experience. "
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="background-image: url(images/person_3.jpg)"
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Amsalu Alemayehu</p>
-                        <span class="position">CEO, Wasasa Microfinance </span>
-                      </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <span class="fa fa-quote-left"></span>
+                  <p class="mb-4">
+                    "Outstanding service! Mesert property management team in
+                    Ethiopia has consistently exceeded our expectations. From
+                    timely rent collection to swift maintenance responses,
+                    they've made owning property a hassle-free experience. "
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Amsalu Alemayehu</p>
+                      <span class="position">CEO, Wasasa Microfinance </span>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      "Efficient and trustworthy! Their attention to detail,
-                      transparent communication, and dedication to tenant
-                      satisfaction have made them an invaluable partner.
-                      Couldn't be happier with the results!"
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="background-image: url(images/person_2.jpg)"
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Amsalu Alemayehu</p>
-                        <span class="position">Investor</span>
-                      </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <span class="fa fa-quote-left"></span>
+                  <p class="mb-4">
+                    "Efficient and trustworthy! Their attention to detail,
+                    transparent communication, and dedication to tenant
+                    satisfaction have made them an invaluable partner.
+                    Couldn't be happier with the results!"
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Amsalu Alemayehu</p>
+                      <span class="position">Investor</span>
                     </div>
                   </div>
                 </div>
@@ -642,151 +554,124 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center heading-section ftco-animate mb-5">
-            <span class="subheading">Services</span>
-            <h2 class="mb-3">Special Services</h2>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center heading-section ftco-animate mb-5">
+          <span class="subheading">Services</span>
+          <h2 class="mb-3">Special Services</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-home-repair"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Development</h3>
+              <p>
+                A small river named Duden flows by their place and supplies it
+                with the necessary regelialia.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-home-repair"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Development</h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-sales"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Sales Marketing</h3>
+              <p>
+                A small river named Duden flows by their place and supplies it
+                with the necessary regelialia.
+              </p>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-sales"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Sales Marketing</h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-bank"></span>
+            </div>
+            <div class="media-body py-md-4">
+              <h3>Brokerage</h3>
+              <p>
+                A small river named Duden flows by their place and supplies it
+                with the necessary regelialia.
+              </p>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-bank"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Brokerage</h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="media block-6 services d-block text-center px-3 pb-4">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="flaticon-team"></span>
             </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center px-3 pb-4">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-team"></span>
-              </div>
-              <div class="media-body py-md-4">
-                <h3>Property Management</h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
+            <div class="media-body py-md-4">
+              <h3>Property Management</h3>
+              <p>
+                A small river named Duden flows by their place and supplies it
+                with the necessary regelialia.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACT SECTOION-->
-  
-    <section id="contact-main" class="ftco-section contact-section">
-      <div class="container">
-        <div class="row block-9 justify-content-center mb-5">
-          <div class="col-md-8 mb-md-5">
-            <h2 class="text-center">
-              If you got any questions <br />please do not hesitate to send us a
-              message
-            </h2>
-            <!-- <form id="contactForm" action="http://localhost:5500/submit-form" method="post"> -->
-            <form  name="submit-to-google-sheet" >
-              <span id="msg"></span>
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="Name"
-                  name="Name"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="Email"
-                  name="Email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  id="emial"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" id="Subject" name="Subject" class="form-control" placeholder="Subject" required/>
-              </div>
+  <!-- CONTACT SECTOION-->
 
-              <section id="datetime-section">
-                <p>The current date and time is: <time name="Time" id="currentDateTime"></time></p>
-                <input name="Date" type="text" id="datetime" style="border: none;" readonly />
-              </section>
-              
-              <div class="form-group">
-                <textarea
-                  id = "Message"
-                  name="Message"
-                  cols="30"
-                  rows="7"
-                  class="form-control"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              
+  <section id="contact-main" class="ftco-section contact-section">
+    <div class="container">
+      <div class="row block-9 justify-content-center mb-5">
+        <div class="col-md-8 mb-md-5">
+          <h2 class="text-center">
+            If you got any questions <br />please do not hesitate to send us a
+            message
+          </h2>
+          <!-- <form id="contactForm" action="http://localhost:5500/submit-form" method="post"> -->
+          <form name="submit-to-google-sheet">
+            <span id="msg"></span>
+            <div class="form-group">
+              <input type="text" id="Name" name="Name" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="Email" name="Email" class="form-control" placeholder="Your Email" id="emial" required />
+            </div>
+            <div class="form-group">
+              <input type="text" id="Subject" name="Subject" class="form-control" placeholder="Subject" required />
+            </div>
+
+            <section id="datetime-section">
+              <p>The current date and time is: <time name="Time" id="currentDateTime"></time></p>
+              <input name="Date" type="text" id="datetime" style="border: none;" readonly />
+            </section>
+
+            <div class="form-group">
+              <textarea id="Message" name="Message" cols="30" rows="7" class="form-control"
+                placeholder="Message"></textarea>
+            </div>
 
 
 
-              <script>
+
+            <script>
 
               function updateDateTime() {
-                  var datetimeInput = document.getElementById('datetime');
+                var datetimeInput = document.getElementById('datetime');
 
-                  var now = new Date();
-                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                  var formattedDateTime = now.toLocaleDateString('en-US', options);
+                var now = new Date();
+                var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var formattedDateTime = now.toLocaleDateString('en-US', options);
 
-                  datetimeInput.value = formattedDateTime;
+                datetimeInput.value = formattedDateTime;
               }
 
               // Update the date every second
@@ -797,288 +682,226 @@
 
 
 
-              </script>
-              
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary py-3 px-5">Submit Message</button>
-                
-              </div>
-              
-            </form>
-          </div>
+            </script>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary py-3 px-5">Submit Message</button>
+
+            </div>
+
+          </form>
         </div>
-        <div class="row d-flex mb-5 contact-info justify-content-center">
-          <div class="col-md-8">
-            <div class="row mb-5">
-              <div class="col-md-4 text-center py-4">
-                <div class="icon">
-                  <span class="fa fa-map"></span>
-                </div>
-                <p>
-                  <span>Address:</span> 198 West 21th Street, Suite 721 New York
-                  NY 10016
-                </p>
+      </div>
+      <div class="row d-flex mb-5 contact-info justify-content-center">
+        <div class="col-md-8">
+          <div class="row mb-5">
+            <div class="col-md-4 text-center py-4">
+              <div class="icon">
+                <span class="fa fa-map"></span>
               </div>
-              <div class="col-md-4 text-center border-height py-4">
-                <div class="icon">
-                  <span class="fa fa-phone"></span>
-                </div>
-                <p>
-                  <span>Phone:</span>
-                  <a href="tel://1234567920">+ 1235 2355 98</a>
-                </p>
+              <p>
+                <span>Address:</span> 198 West 21th Street, Suite 721 New York
+                NY 10016
+              </p>
+            </div>
+            <div class="col-md-4 text-center border-height py-4">
+              <div class="icon">
+                <span class="fa fa-phone"></span>
               </div>
-              <div class="col-md-4 text-center py-4">
-                <div class="icon">
-                  <span class="fa fa-paper-plane"></span>
-                </div>
-                <p>
-                  <span>Email:</span>
-                  <a
-                    href="https://preview.colorlib.com/cdn-cgi/l/email-protection#3f565159507f46504a4d4c564b5a115c5052"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="9cf5f2faf3dce5f3e9eeeff5e8f9b2fff3f1"
-                      >support@emebet.com</span
-                    ></a
-                  >
-                </p>
+              <p>
+                <span>Phone:</span>
+                <a href="tel://1234567920">+ 1235 2355 98</a>
+              </p>
+            </div>
+            <div class="col-md-4 text-center py-4">
+              <div class="icon">
+                <span class="fa fa-paper-plane"></span>
               </div>
+              <p>
+                <span>Email:</span>
+                <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection#3f565159507f46504a4d4c564b5a115c5052"><span
+                    class="__cf_email__"
+                    data-cfemail="9cf5f2faf3dce5f3e9eeeff5e8f9b2fff3f1">support@emebet.com</span></a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
 
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwz6X0qEhVrqIKAVqtitY-GRKxWPybNHc46E4TjRurmF1jAjJiZBXJqJM5QePUL6pBi/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById('msg')
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwz6X0qEhVrqIKAVqtitY-GRKxWPybNHc46E4TjRurmF1jAjJiZBXJqJM5QePUL6pBi/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {msg.innerHTML="Message sent successfuly! we will respond as soon as possible" 
-          setTimeout(function(){
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Message sent successfuly! we will respond as soon as possible"
+          setTimeout(function () {
             msg.innerHTML = ""
           }, 5000)
 
           form.reset()
-        
+
         })
-          .catch(error => console.error('Error!', error.message))
-      })
+        .catch(error => console.error('Error!', error.message))
+    })
 
 
-    </script>
+  </script>
 
-    
-    
-    
-    
-    
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Ecoverde</h2>
-              <p>
-                Efficient property management turns spaces into homes and
-                investments into peace of mind.
-              </p>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Community</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Search
-                    Properties</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>For Agents</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Reviews</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>FAQs</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#about-section"
-                    ><span class="fa fa-chevron-right mr-2"></span>Our Story</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Meet the
-                    team</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Careers</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Company</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>About Us</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Press</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Contact</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Careers</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon fa fa-map"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-envelope pr-4"></span
-                      ><span class="text"
-                        ><span
-                          class="__cf_email__"
-                          data-cfemail="01686f676e41786e7473656e6c60686f2f626e6c"
-                          >[email&#160;protected]</span
-                        ></span
-                      ></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+
+
+
+
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Ecoverde</h2>
             <p>
-              Copyright &copy;
-              <script
-                data-cfasync="false"
-                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-              ></script>
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | Emnet Property Managment PLC
+              Efficient property management turns spaces into homes and
+              investments into peace of mind.
             </p>
           </div>
         </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Community</h2>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Search
+                  Properties</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>For Agents</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Reviews</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#about-section"><span class="fa fa-chevron-right mr-2"></span>Our Story</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Meet the
+                  team</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Company</h2>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Press</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li>
+                  <span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco,
+                    California,
+                    USA</span>
+                </li>
+                <li>
+                  <a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon fa fa-envelope pr-4"></span><span class="text"><span
+                        class="__cf_email__"
+                        data-cfemail="01686f676e41786e7473656e6c60686f2f626e6c">[email&#160;protected]</span></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;
+            <script data-cfasync="false"
+              src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | Emnet Property Managment PLC
+          </p>
+        </div>
+      </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+  </footer>
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script> 
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+ 
+  <script src="js/main.js"></script>
 
-      gtag("config", "UA-23581568-13");
-    </script>
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
-      integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-      data-cf-beacon='{"rayId":"8424f3fbf9005450","b":1,"version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-23581568-13");
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+    integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+    data-cf-beacon='{"rayId":"8424f3fbf9005450","b":1,"version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
